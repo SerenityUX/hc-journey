@@ -1,4 +1,66 @@
 <!DOCTYPE html>
 <html>
-    <p>Hello World</p>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function calculateAge(birthDate) {
+            const now = new Date();
+            const birth = new Date(birthDate);
+            let age = now.getFullYear() - birth.getFullYear();
+            const m = now.getMonth() - birth.getMonth();
+            if (m < 0 || (m === 0 && now.getDate() < birth.getDate())) {
+                age--;
+            }
+            const daysInYear = (now.getFullYear() % 4 === 0 && (now.getFullYear() % 100 !== 0 || now.getFullYear() % 400 === 0)) ? 366 : 365;
+            const daysLived = (now - birth) / (1000 * 60 * 60 * 24);
+            const ageDecimal = (daysLived / daysInYear).toFixed(2);
+            return ageDecimal;
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const ageSpan = document.getElementById("ageSpan");
+            const birthDate = "2004-09-28";
+            ageSpan.textContent = calculateAge(birthDate);
+        });
+    </script>
+</head>
+<body style="display: flex; justify-content: center;">
+    <div style="max-width: 720px;">
+        <div class="header">
+            <h1>Journeys @</h1>
+            <img style="height: 78px" src="./assets/hc-logo.png"/>
+            <h1 id="date">(2023-2024)</h1>
+        </div>
+        <img style="display: flex; width: 100%; margin-top: 16px" src="./assets/journey-cover.png"/>
+        <p>My Journey:</p>
+        <ul>
+            <li><a href="./how-I-discovered-hack-club.html">How I discovered Hack Club</a></li>
+            <li><a href="./how-I-started-my-hack-club.html">How & why I started my Hack Club</a></li>
+            <li><a href="./flying-to-india-for-epoch.html">Flying to India for Epoch</a></li>
+            <li><a href="./south-carolinas-first-hs-hackathon.html">South Carolina’s First HS Hackathon</a></li>
+            <li><a href="./why-clubs-directory-failed.html">Why Clubs Directory Failed</a></li>
+            <li><a href="./driving-to-angel-hacks-after-graduation.html">Driving to Angel Hacks after Graduation</a></li>
+            <li><a href="./moving-to-vt-for-gap-year-hyde-st.html">Moving to VT for Gap Year + Hyde St</a></li>
+            <li><a href="./hack-club-jams-first-big-project.html">Hack Club Jams - first big project</a></li>
+            <li><a href="./pizza-grant-first-partnership.html">Pizza Grant - first partnership</a></li>
+            <li><a href="./taking-over-operations-more-responsibility.html">Taking over operations - more responsibility</a></li>
+            <li><a href="./summit-much-more-responsibility.html">Summit - much more responsibility</a></li>
+            <li><a href="./trail-the-hardest-thing-ive-ever-done.html">Trail - the hardest & best thing I’ve ever done</a></li>
+            <li><a href="./friends-what-lasts-after-the-gap-year.html">Friends - what lasts after the gap year...</a></li>
+            <li><a href="./side-projects-weekend-ships.html">Side Projects - weekend ships</a></li>
+            <li><a href="./side-projects-weekend-ships.html">What's Next? Japan?</a></li>
+        </ul>
+        <p>
+            Hey, Thomas here! I’m <span id="ageSpan"></span> years old (as of today), but as of writing this I am 19.78 years old. I joined Hack Club when I was 17 years old.
+            <br/><br/>
+            Over the past couple years, I made some decisions that will forever alter the course of my life! One of which was deciding to start a Hack Club at <a href="https://dhs.spart6.org/">my high school in South Carolina</a>... another was deciding to leave the country for the first time to go to <a href="https://github.com/hackclub/epoch">my first in-person hackathon</a>, and another being deciding to work at Hack Club for a year with my best friend (Dieter) instead of going to university.
+            <br/><br/>
+            On this page, you’ll get to hear about each one of these (& many more) adventures & decisions that I took over the past couple years. You’ll learn a bit about me, a bit about Hack Club, and a bit about what it’s like to take a gap year!
+            <br/><br/>
+            I’m now a Hack Club alum (I no longer work at Hack Club). I’ll still check the Slack from time to time & you’re always welcome to reach out <a href="https://hackclub.slack.com/team/U041FQB8VK2">@thomas</a>. I am grateful for all that Hack Club has offered me over the past couple years, and I am proud of the work I did to help Hack Clubbers discover the joy of building projects with their friends.
+            <br/><br/>
+        </p>
+    </div>
+</body>
 </html>
