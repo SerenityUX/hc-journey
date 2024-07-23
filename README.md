@@ -1,4 +1,4 @@
-# Hack Club Journey!
+# My Hack Club Journey!
 
 Hey, Thomas here! As of writing this I am 19.81 years old. I joined Hack Club when I was 17 years old.
 
