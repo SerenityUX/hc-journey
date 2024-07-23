@@ -1,4 +1,4 @@
-# hack club journey!
+# Hack Club Journey!
 
 Hey, Thomas here! As of writing this I am 19.81 years old. I joined Hack Club when I was 17 years old.
 
@@ -18,6 +18,7 @@ My Journey:
 * Moving to VT for Gap Year + Hyde St
 * Hack Club Jams - first big project
 * Pizza Grant - first partnership
+* Club Mail - Reaching CS Teachers
 * Taking over operations - more responsibility
 * Summit - much more responsibility
 * Trail - the hardest thing I’ve ever done
