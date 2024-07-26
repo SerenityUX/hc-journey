@@ -153,13 +153,24 @@ a {
     cursor: url('./assets/hand-grab.png') 0 0, auto; /* Optional coordinates to adjust the hotspot */
 }
 
+button {
+    color: #FFFDE8;
+    border: none; padding: 4px 6px;
+    background-color: #021995;
+    border-bottom: 1px dotted #021995;
+    text-decoration: none;
+    cursor: url('./assets/hand-grab.png') 0 0, auto; /* Optional coordinates to adjust the hotspot */
+}
+
 ::selection {
     background-color: #021995; /* Change this to your desired color */
     color: #FFFDE8; /* Optional: Change the text color */
 }
 
 .header {
-    display: flex; flex-direction: row; justify-content: space-between; align-items: center;
+
+    display: flex; 
+    flex-direction: row; justify-content: space-between; align-items: center;
 }
 
 @media (max-width: 768px) {
