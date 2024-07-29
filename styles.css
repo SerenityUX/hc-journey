@@ -182,3 +182,8 @@ button {
         display: none
     }
 }
+@media (max-width: 768px) {
+    .audio-indicator {
+        display: none;
+    }
+}
