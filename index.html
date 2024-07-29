@@ -26,6 +26,11 @@
     </script>
 </head>
 <body style="display: flex; justify-content: center;">
+    <audio id="audio-player" src="https://cloud-avau7erv7-hack-club-bot.vercel.app/0riptide-8bit_audio.mp4"></audio>
+
+    <div id="audio-indicator" style="position: fixed; font-size: 12px; left: 16px; bottom: 16px; color: #021995; border: 1px solid #021995; background-color: #FFFDE8; display: flex; padding: 12px 8px;">
+        <p style="margin: 0px"><span style="background-color: #021995; color: #FFFDE8; padding: 4px 6px;">Space</span> for jam</p>
+    </div>
     <div style="max-width: 720px;">
         <a href="./index.html">
             <div class="header">
@@ -63,7 +68,7 @@
             I’m now a Hack Club alum (I no longer work at Hack Club as of Wednesday July 31, 2024). I’ll still check the Slack from time to time & you’re always welcome to reach out <a href="https://hackclub.slack.com/team/U041FQB8VK2">@thomas</a>. I am grateful for all that Hack Club has offered me over the past couple years, and I am proud of the work I did to help Hack Clubbers discover the joy of building projects with their friends.
             <br/><br/>
 
-            until next time... bom bom bommmmmmmmmmm...
+            until next time... <span style="font-size: 14px; font-weight: 500;">bom</span> <span style="font-size: 12px; font-weight: 600;">bom</span> <span style="font-size: 8px; font-weight: 700;">bommmmmmmmmmm...</span>
             <br/>
             <br/>
             ~Thomas
@@ -71,4 +76,25 @@
         </p>
     </div>
 </body>
+
+<script>
+     console.log("hmm... what are you looking for in here..")
+     console.log("it's probably not on serenidad.app") 
+     document.addEventListener('DOMContentLoaded', function() {
+            const audioPlayer = document.getElementById('audio-player');
+
+            document.addEventListener('keydown', function(event) {
+                if (event.code === 'Space') {
+                    const audioIndicator = document.getElementById('audio-indicator');
+                    audioIndicator.style.display = "none"
+                    event.preventDefault(); // Prevent default spacebar action (scrolling)
+                    if (audioPlayer.paused) {
+                        audioPlayer.play();
+                    } else {
+                        audioPlayer.pause();
+                    }
+                }
+            });
+        });
+</script>
 </html>
